@@ -1,1 +1,14 @@
-<p>cockpit works!</p>
+<div class="flex flex-row">
+    <div class="grid col-span-12">
+        <p class="">Add new servers or blueprints!</p>
+
+        <label for="server">Server Name</label>
+        <input type="text" id="server" class="" [(ngModel)]="newServerName">
+
+        <label for="server">Server Content</label>
+        <input type="text" id="server" class="" [(ngModel)]="newServerContent">
+
+        <button class="" (click)="onAddServer()">Add Server</button>
+        <button class="" (click)="onAddBlueprint()">Add Bleuprint</button>
+    </div>
+</div>
