@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CockpitComponent implements OnInit {
 
-  serverElements: Array<Object> = [];
+  // serverElements: Array<Object> = [];
   newServerName = "";
   newServerContent = "";
 
@@ -16,17 +16,17 @@ export class CockpitComponent implements OnInit {
   }
 
   onAddServer() {
-    this.serverElements.push({
-      tyep: "server",
-      name: this.newServerName,
-      content: this.newServerContent
-    })
+    // this.serverElements.push({
+    //   tyep: "server",
+    //   name: this.newServerName,
+    //   content: this.newServerContent
+    // })
   }  
   onAddBlueprint() {
-    this.serverElements.push({
-      tyep: "blueprint",
-      name: this.newServerName,
-      content: this.newServerContent
-    })
+    // this.serverElements.push({
+    //   tyep: "blueprint",
+    //   name: this.newServerName,
+    //   content: this.newServerContent
+    // })
   }
 }

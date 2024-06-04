@@ -1,14 +1,15 @@
-<div class="flex flex-row">
-    <div class="grid col-span-12">
-        <p class="">Add new servers or blueprints!</p>
-
-        <label for="server">Server Name</label>
-        <input type="text" id="server" class="" [(ngModel)]="newServerName">
-
-        <label for="server">Server Content</label>
-        <input type="text" id="server" class="" [(ngModel)]="newServerContent">
-
-        <button class="" (click)="onAddServer()">Add Server</button>
-        <button class="" (click)="onAddBlueprint()">Add Bleuprint</button>
+<div class="flex flex-row justify-center mt-8">
+    <div class="w-full grid col-span-12 gap-4 p-6 bg-white rounded-lg shadow-md">
+      <p class="text-lg font-semibold mb-4">Add new servers or blueprints!</p>
+  
+      <label for="server" class="block text-gray-700">Server Name</label>
+      <input type="text" id="server" class="block w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" [(ngModel)]="newServerName">
+  
+      <label for="server-content" class="block text-gray-700">Server Content</label>
+      <input type="text" id="server-content" class="block w-full px-4 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" [(ngModel)]="newServerContent">
+  
+      <button class="w-full py-2 mb-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50" (click)="onAddServer()">Add Server</button>
+      <button class="w-full py-2 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50" (click)="onAddBlueprint()">Add Blueprint</button>
     </div>
-</div>
+  </div>
+  

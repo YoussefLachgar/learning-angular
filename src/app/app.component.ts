@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learn-angular-project';
+  serverElements = [{ type: "server", name: "testServer", content: "server content test" }];
+
 }
