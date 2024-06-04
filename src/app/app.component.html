@@ -1,7 +1,10 @@
 <div class="container mx-auto text-xl p-4">
-  <app-cockpit></app-cockpit>
+  <app-cockpit 
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
   <div class="flex flex-row mt-4">
-    <div class="w-full grid grid-flow-col gap-4">
+    <div class="w-full grid grid-flow-row gap-4">
       <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement"></app-server-element>
     </div>
   </div>
