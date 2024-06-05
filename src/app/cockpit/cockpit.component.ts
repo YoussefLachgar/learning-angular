@@ -8,8 +8,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class CockpitComponent implements OnInit {
 
   // serverElements: Array<Object> = [];
-  @Output() serverCreated = new EventEmitter<{ serverName: string, serverContent: string }>();
-  @Output() blueprintCreated = new EventEmitter<{ blueprintName: string, blueprintContent: string }>();
+  @Output('SRcreated') serverCreated = new EventEmitter<{ serverName: string, serverContent: string }>();
+  @Output('BRcreated') blueprintCreated = new EventEmitter<{ blueprintName: string, blueprintContent: string }>();
   newServerName = "";
   newServerContent = "";
 
