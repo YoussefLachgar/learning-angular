@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -12,21 +12,22 @@ export class CockpitComponent implements OnInit {
   @Output('BRcreated') blueprintCreated = new EventEmitter<{ blueprintName: string, blueprintContent: string }>();
   // newServerName = "";
   // newServerContent = "";
+  @ViewChild('contentInput') serverContent : ElementRef;
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
-  onServerAdded(nameInput: HTMLInputElement, contentInput: HTMLInputElement) {
+  onServerAdded(nameInput: HTMLInputElement) {
     this.serverCreated.emit({
       serverName: nameInput.value,
-      serverContent: contentInput.value
+      serverContent: this.serverContent.nativeElement.value
     });
   }  
-  onAddBlueprint(nameInput: HTMLInputElement, contentInput: HTMLInputElement) {
+  onAddBlueprint(nameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
       blueprintName: nameInput.value,
-      blueprintContent: contentInput.value
+      blueprintContent: this.serverContent.nativeElement.value
     });
   }
 }
