@@ -1,10 +1,7 @@
 <div class=" w-full bg-gray-100 p-4 rounded-lg shadow-md">
     <div class="text-xl font-semibold mb-2">{{ element.name }}</div>
     <div class="text-base">
-      <p>
-        <strong *ngIf="element.type === 'server'" class="font-bold text-blue-600">{{ element.content }}</strong>
-        <em *ngIf="element.type === 'blueprint'" class="italic text-green-500">{{ element.content }}</em>
-      </p>
+      <ng-content></ng-content>
     </div>
   </div>
   
