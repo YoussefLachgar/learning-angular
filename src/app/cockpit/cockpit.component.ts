@@ -15,7 +15,7 @@ export class CockpitComponent implements OnInit {
   @ViewChild('contentInput') serverContent : ElementRef;
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
 
   onServerAdded(nameInput: HTMLInputElement) {
