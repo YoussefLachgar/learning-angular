@@ -1,5 +1,5 @@
 <div class="container mx-auto text-xl p-4">
-  <app-cockpit 
+  <app-cockpit
     (SRcreated)="onServerAdded($event)"
     (BRcreated)="onBlueprintAdded($event)"
   ></app-cockpit>
@@ -8,7 +8,7 @@
       <button class="w-full py-2 mb-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50" (click)="onChangeFirst()">change first elemnet</button>
       <button class="w-full py-2 mb-2 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50" (click)="onDestroyFirst()">change first elemnet</button>
       <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement" [name]="serverElement.name">
-        <p>
+        <p #contentParagraph>
           <strong *ngIf="serverElement.type === 'server'" class="font-bold text-blue-600">{{ serverElement.content }}</strong>
           <em *ngIf="serverElement.type === 'blueprint'" class="italic text-green-500">{{ serverElement.content }}</em>
         </p>

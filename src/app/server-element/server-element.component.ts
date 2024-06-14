@@ -12,7 +12,7 @@ import {
   ViewEncapsulation,
   OnDestroy,
   ViewChild,
-  ElementRef
+  ElementRef, ContentChild
 } from '@angular/core';
 
 @Component({
@@ -34,6 +34,7 @@ OnDestroy {
   @Input() element: { type: string, name: string, content: string };
   @Input() name: string;
   @ViewChild('heading', {static: true}) header: ElementRef;
+  @ContentChild('contentParagraph', {static: true}) prgraph: ElementRef;
 
   constructor() {
     console.log('Constructor called!');
@@ -47,6 +48,7 @@ OnDestroy {
   ngOnInit(): void {
     console.log('ngOnInit called!');
     console.log("text content: "+ this.header.nativeElement.textContent);
+    console.log("content paragraph: " + this.prgraph.nativeElement.textContent);
   }
 
   ngDoCheck(): void {
@@ -59,6 +61,7 @@ OnDestroy {
 
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked called!');
+    console.log("content paragraph: " + this.prgraph.nativeElement.textContent);
   }
 
   ngAfterViewInit(): void {
